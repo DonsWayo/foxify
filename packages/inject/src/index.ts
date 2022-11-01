@@ -108,7 +108,7 @@ export default function inject<
     });
   };
 
-  const res = new opts.Response(req) as Response;
+  const res = new opts.Response(req) as unknown as Response;
 
   res.assignSocket(socket as any);
 
