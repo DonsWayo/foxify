@@ -3,7 +3,7 @@
   "compilerOptions": {
     "tsBuildInfoFile": "tsconfig.esm.tsbuildinfo",
     "module": "ESNext",
-    "outDir": ".build/esm",
+    "outDir": "dits/esm",
     "declaration": false,
     "declarationDir": null
   }
