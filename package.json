@@ -1,123 +1,24 @@
 {
   "name": "foxify",
-  "version": "1.0.0-beta.1",
-  "description": "The fast, easy to use & typescript ready web framework for Node.js",
-  "author": {
-    "name": "Ardalan Amini",
-    "email": "ardalanamini22@gmail.com",
-    "url": "https://ardalanamini.com"
-  },
-  "license": "MIT",
-  "homepage": "https://foxify.js.org",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/foxifyjs/foxify.git"
-  },
-  "funding": {
-    "url": "https://opencollective.com/foxify"
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/foxify"
-  },
-  "keywords": [
-    "node",
-    "fast",
-    "speed",
-    "typescript",
-    "api",
-    "web",
-    "app",
-    "application",
-    "route",
-    "router",
-    "routing",
-    "middleware",
-    "cluster",
-    "clustering",
-    "database",
-    "model",
-    "framework",
-    "foxify"
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "engines": {
-    "node": ">= 8.12"
-  },
-  "files": [
-    "framework"
-  ],
-  "main": "framework/index.js",
-  "types": "framework/index.d.ts",
   "scripts": {
-    "postinstall": "node -e \"console.log('\\u001b[35m\\u001b[1mLove Foxify? You can now donate to our open collective:\\u001b[22m\\u001b[39m\\n > \\u001b[34mhttps://opencollective.com/foxify/donate\\u001b[0m\\n')\"",
-    "prepublishOnly": "npm run lint && npm test && npm run build",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "lint": "eslint src test",
-    "lint:format": "prettier -w src test && eslint --fix src test",
-    "typedoc": "typedoc --out docs/ --mode file --module commonjs --target ES6 --plugin typedoc-plugin-example-tag src/",
-    "doc": "node scripts/doc.js",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
-  },
-  "peerDependencies": {
-    "@foxify/http": "^1",
-    "@foxify/router": "^1",
-    "@types/node": "^14",
-    "prototyped.js": "^1"
-  },
-  "dependencies": {
-    "@foxify/inject": "^1.1.0",
-    "dotenv": "^8.2.0",
-    "escape-html": "^1.0.3",
-    "etag": "^1.8.1",
-    "fast-json-stringify": "^1.21.0",
-    "proxy-addr": "^2.0.6",
-    "qs": "^6.9.4",
-    "safe-regex": "^2.1.1",
-    "serve-static": "^1.14.1"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@foxify/http": "^1.0.0-beta.2",
-    "@foxify/router": "^1.0.0-beta.2",
-    "@types/cookie": "^0.4.0",
-    "@types/cookie-parser": "^1.4.1",
-    "@types/dotenv": "^8.2.0",
-    "@types/escape-html": "1.0.0",
-    "@types/etag": "^1.8.0",
-    "@types/jest": "^26.0.19",
-    "@types/node": "^14.14.17",
-    "@types/proxy-addr": "^2.0.0",
-    "@types/qs": "^6.9.5",
-    "@types/safe-regex": "^1.1.2",
-    "@typescript-eslint/eslint-plugin": "^4.11.1",
-    "@typescript-eslint/parser": "^4.11.1",
-    "cookie": "^0.4.1",
-    "cookie-parser": "^1.4.5",
-    "ejs": "^2.7.4",
-    "esdoc-typescript-plugin": "^1.0.1",
-    "eslint": "^7.16.0",
-    "jest": "^26.6.3",
-    "morgan": "^1.10.0",
-    "prettier": "^2.2.1",
-    "prototyped.js": "^1.0.1",
-    "rimraf": "^2.7.1",
-    "ts-jest": "^26.4.4",
-    "typedoc": "^0.15.0",
-    "typedoc-plugin-example-tag": "^1.0.2",
-    "typescript": "^4.1.3"
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "node"
-    ],
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    },
-    "testMatch": [
-      "<rootDir>/test/**/*\\.ts"
-    ]
-  }
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "npm@8.5.0"
 }
