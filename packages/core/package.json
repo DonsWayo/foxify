@@ -61,13 +61,13 @@
     "test:coverage": "jest --coverage"
   },
   "peerDependencies": {
-    "@foxify/http": "*",
-    "@foxify/router": "*",
+    "@foxify/http": "workspace:*",
+    "@foxify/router": "workspace:*",
     "@types/node": "^16",
     "prototyped.js": "^1"
   },
   "dependencies": {
-    "@foxify/inject": "*",
+    "@foxify/inject": "workspace:*",
     "dotenv": "^8.2.0",
     "escape-html": "^1.0.3",
     "etag": "^1.8.1",
@@ -78,8 +78,8 @@
     "serve-static": "^1.14.1"
   },
   "devDependencies": {
-    "@foxify/http": "*",
-    "@foxify/router": "*",
+    "@foxify/http": "workspace:*",
+    "@foxify/router": "workspace:*",
     "@types/cookie": "^0.4.0",
     "@types/cookie-parser": "^1.4.1",
     "@types/dotenv": "^8.2.0",
@@ -103,6 +103,7 @@
     "prototyped.js": "^1.0.1",
     "rimraf": "^2.7.1",
     "ts-jest": "^26.4.4",
+    "tsconfig": "workspace:*",
     "typedoc": "^0.15.0",
     "typedoc-plugin-example-tag": "^1.0.2",
     "typescript": "^4.1.3"
