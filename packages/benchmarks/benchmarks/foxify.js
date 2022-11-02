@@ -1,6 +1,6 @@
 "use strict"
 
-const Foxify = require("foxify");
+const Foxify = require("foxify").default;
 
 const app = new Foxify();
 
@@ -21,6 +21,6 @@ const schema = {
   },
 };
 
-app.get("/", { schema }, (req, res) => res.json({ hello: "world" }));
+app.get("/", (req, res) => res.json({ hello: "world" }));
 
 app.start();
